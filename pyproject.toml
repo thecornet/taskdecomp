@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thecornet-taskdecomp"
+version = "0.1.0"
+description = "把原始需求拆成子点，比对分解结果，标出未覆盖的子点与多余步骤"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "thecornet" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://thecornet.github.io"
+Repository = "https://github.com/thecornet/taskdecomp"
+Issues = "https://github.com/thecornet/taskdecomp/issues"
+
+[project.scripts]
+taskdecomp = "taskdecomp:main"
+
+[tool.setuptools]
+py-modules = ["taskdecomp"]
